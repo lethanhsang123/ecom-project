@@ -1,0 +1,30 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/product-service
+    username: ${MYSQL_USER:admin}
+    password: ${MYSQL_PASSWORD:admin}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 32
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      timeout: 15s
+      password: ${REDIS_PASSWORD:6379}
+  cache:
+    type: redis
+    redis:
+      time-to-live: 2m
+      cache-null-values: false
+logging:
+  level:
+#    ROOT: DEBUG
+    org.hibernate.SQL: DEBUG
+    com.personal.project.productservice: DEBUG

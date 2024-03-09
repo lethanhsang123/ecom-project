@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.personal.project.common.cache.RedisCacheConfig, \
+com.personal.project.common.cache.CacheManagerConfiguration

@@ -1,0 +1,39 @@
+Manifest-Version: 1.0
+Main-Class: com.personal.project.productservice.ProductServiceApplicatio
+ n
+Class-Path: netty-common-4.1.100.Final.jar micrometer-observation-1.10.1
+ 2.jar jackson-datatype-jsr310-2.14.3.jar jaxb-runtime-4.0.3.jar spring-
+ jdbc-6.0.13.jar classmate-1.5.1.jar spring-boot-starter-logging-3.0.12.
+ jar tomcat-embed-websocket-10.1.15.jar jakarta.persistence-api-3.1.0.ja
+ r tomcat-embed-el-10.1.15.jar spring-web-6.0.13.jar byte-buddy-1.12.23.
+ jar hibernate-validator-8.0.1.Final.jar netty-transport-4.1.100.Final.j
+ ar log4j-api-2.19.0.jar spring-boot-starter-validation-3.0.12.jar tomca
+ t-embed-core-10.1.15.jar spring-boot-starter-aop-3.0.12.jar spring-webm
+ vc-6.0.13.jar hibernate-commons-annotations-6.0.6.Final.jar jakarta.act
+ ivation-api-2.1.2.jar spring-data-keyvalue-3.0.11.jar slf4j-api-2.0.9.j
+ ar spring-expression-6.0.13.jar jboss-logging-3.5.3.Final.jar HikariCP-
+ 5.0.1.jar jaxb-core-4.0.3.jar logback-classic-1.4.11.jar netty-handler-
+ 4.1.100.Final.jar spring-context-6.0.13.jar jakarta.xml.bind-api-4.0.1.
+ jar spring-jcl-6.0.13.jar netty-transport-native-unix-common-4.1.100.Fi
+ nal.jar netty-buffer-4.1.100.Final.jar jakarta.transaction-api-2.0.1.ja
+ r spring-oxm-6.0.13.jar spring-orm-6.0.13.jar txw2-4.0.3.jar istack-com
+ mons-runtime-4.1.2.jar snakeyaml-1.33.jar jackson-core-2.14.3.jar jacks
+ on-databind-2.14.3.jar spring-data-commons-3.0.11.jar spring-context-su
+ pport-6.0.13.jar spring-boot-starter-data-jpa-3.0.12.jar lettuce-core-6
+ .2.6.RELEASE.jar spring-beans-6.0.13.jar netty-codec-4.1.100.Final.jar 
+ spring-boot-3.0.12.jar jakarta.annotation-api-2.1.1.jar reactor-core-3.
+ 5.11.jar spring-boot-starter-json-3.0.12.jar jackson-module-parameter-n
+ ames-2.14.3.jar spring-data-redis-3.0.11.jar jakarta.inject-api-2.0.0.j
+ ar spring-aspects-6.0.13.jar netty-resolver-4.1.100.Final.jar jandex-2.
+ 4.2.Final.jar angus-activation-2.0.1.jar jackson-annotations-2.14.3.jar
+  spring-core-6.0.13.jar spring-boot-starter-data-redis-3.1.5.jar spring
+ -boot-starter-web-3.0.12.jar spring-boot-starter-jdbc-3.0.12.jar spring
+ -data-jpa-3.0.11.jar spring-boot-starter-tomcat-3.0.12.jar spring-boot-
+ devtools-3.0.12.jar spring-boot-autoconfigure-3.0.12.jar jul-to-slf4j-2
+ .0.9.jar mysql-connector-j-8.0.33.jar log4j-to-slf4j-2.19.0.jar logback
+ -core-1.4.11.jar mapstruct-1.5.2.Final.jar micrometer-commons-1.10.12.j
+ ar spring-boot-starter-3.0.12.jar reactive-streams-1.0.4.jar antlr4-run
+ time-4.10.1.jar jackson-datatype-jdk8-2.14.3.jar spring-aop-6.0.13.jar 
+ aspectjweaver-1.9.20.jar jakarta.validation-api-3.0.2.jar spring-tx-6.0
+ .13.jar hibernate-core-6.1.7.Final.jar
+

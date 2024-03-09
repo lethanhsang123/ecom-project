@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.personal.project.common</groupId>
+        <artifactId>common-service</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>common-web</artifactId>
+    <name>common-web</name>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <properties>
+        <common.model.version>0.0.1-SNAPSHOT</common.model.version>
+        <common.persistence.version>0.0.1-SNAPSHOT</common.persistence.version>
+        <common.util.version>0.0.1-SNAPSHOT</common.util.version>
+        <problem-spring-web.version>0.25.0</problem-spring-web.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.personal.project.common</groupId>
+            <artifactId>common-model</artifactId>
+            <version>${common.model.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.personal.project.common</groupId>
+            <artifactId>common-util</artifactId>
+            <version>${common.util.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.personal.project.common</groupId>
+            <artifactId>common-persistence</artifactId>
+            <version>${common.persistence.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.zalando</groupId>
+            <artifactId>problem-spring-web</artifactId>
+            <version>${problem-spring-web.version}</version>
+        </dependency>
+
+
+    </dependencies>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+
+</project>

@@ -1,0 +1,19 @@
+server:
+  port: 9196
+spring:
+  application:
+    name: CLOUD-CONFIG-SERVICE
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    non-secure-port: ${server.port}
+    secure-port-enabled: false

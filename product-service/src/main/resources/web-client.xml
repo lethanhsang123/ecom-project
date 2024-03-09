@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmls="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id ="restClientFactory" class="com.personal.project.productservice.infrastructure.support.fw.client.RestClientFactory">
+        <property name="wsEndpointMap">
+            <list>
+                <bean id="testEndpoint" class="com.personal.project.productservice.infrastructure.support.fw.client.RestClientFactory">
+                    <property name="name" value="testWs"/>
+                    <property name="address" value="${testWs.ws.address}"/>
+                    <property name="userName" value="${testWs.ws.userName}"/>
+                    <property name="password" value="${testWs.ws.password}"/>
+                    <property name="connectionTimeout" value="${testWs.ws.connectionTimeout}"/>
+                    <property name="receiveTimeout" value="${testWs.ws.receiveTimeout}"/>
+                    <property name="writeTimeout" value="${testWs.ws.writeTimeout}"/>
+                    <property name="clientName" value="${testWs.ws.clientName}"/>
+                </bean>
+            </list>
+        </property>
+
+    </bean>
+
+</beans>

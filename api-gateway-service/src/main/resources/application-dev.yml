@@ -1,0 +1,60 @@
+spring:
+  application:
+    name: api-gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: PRODUCT-SERVICE
+          uri: ${PRODUCT_SERVICE_URI:lb://PRODUCT-SERVICE}
+          predicates:
+            - Path=/PRODUCT-SERVICE/**
+          filters:
+            - StripPrefix=1
+            - name: Retry # Retry when exception routing
+              args: # Retry configuration
+                retries: 3
+                method: GET
+                backoff:
+                  firstBackoff: 50ms
+                  maxBackoff: 500ms
+            - name: CircuitBreaker
+              args:
+                name: PRODUCT-SERVICE
+                fallbackUri: forward:/fallback
+
+#      default-filters:
+#        - name: RequestRateLimiter
+#          args:
+#            redis-rate-limiter:
+#              replenishRate: 10
+#              burstCapacity: 20
+#              requestedTokens: 1
+  main:
+    web-application-type: reactive
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    non-secure-port: ${server.port}
+    secure-port-enabled: false
+server:
+  port: 8000
+logging:
+  level:
+    ROOT: DEBUG
+    org.springframework.cloud.gateway: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000

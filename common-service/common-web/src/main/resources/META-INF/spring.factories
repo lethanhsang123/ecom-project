@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.personal.project.common.web.exception.ExceptionHandleAdvice, \
+com.personal.project.common.web.i18n.impl.LocaleStringServiceImpl, \
+com.personal.project.common.web.i18n.LocaleConfig, \
+com.personal.project.common.web.config.jackson.JacksonConfiguration, \
+com.personal.project.productservice.infrastructure.support.logging.LoggingAspectConfiguration
